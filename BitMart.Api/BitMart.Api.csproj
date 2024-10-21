@@ -18,7 +18,7 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<NeutralLanguage>en</NeutralLanguage>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<PackageReleaseNotes>Please refer to changelog at Github https://github.com/burakoner/BitMart.Api/blob/master/CHANGELOG.md</PackageReleaseNotes>
+		<PackageReleaseNotes>Please refer to changelog at Github https://github.com/burakoner/BitMart.Api/blob/main/CHANGELOG.md</PackageReleaseNotes>
 		<PackageIcon>BitMart.png</PackageIcon>
 		<PackageIconUrl />
 		<PackageProjectUrl>https://github.com/burakoner/BitMart.Api</PackageProjectUrl>
