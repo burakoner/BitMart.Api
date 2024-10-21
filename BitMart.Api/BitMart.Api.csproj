@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>BitMart.Api</PackageId>
+		<Authors>Burak Öner</Authors>
+		<Version>4.4.1021</Version>
+		<FileVersion>4.4.1021</FileVersion>
+		<PackageVersion>4.4.1021</PackageVersion>
+		<AssemblyVersion>4.4.1021</AssemblyVersion>
+		<Description>BitMart API v5 Wrapper. Up-to-date, most-complete, well-organized, well-documented, easy-to-use, multi-task and multi-thread compatible BitMart Cryptocurrency Exchange Rest and Websocket Api Wrapper</Description>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageTags>BitMart;V5;OKX;OKEX;Binance;BNB;BTC;Api;Client;Rest;Web;Websocket;Socket;Wrapper;Crypto;Currency;Cryptocurrency;Exchange;Trade;Trading;Bitcoin;Spot;Margin;Futures;Derivates;Stock;Options;Swap;</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<NeutralLanguage>en</NeutralLanguage>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageReleaseNotes>Please refer to changelog at Github https://github.com/burakoner/BitMart.Api/blob/master/CHANGELOG.md</PackageReleaseNotes>
+		<PackageIcon>BitMart.png</PackageIcon>
+		<PackageIconUrl />
+		<PackageProjectUrl>https://github.com/burakoner/BitMart.Api</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/burakoner/BitMart.Api</RepositoryUrl>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+	  <DebugType>embedded</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.1|AnyCPU'">
+	  <DebugType>embedded</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'">
+	  <DebugType>embedded</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.1|AnyCPU'">
+	  <DebugType>embedded</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageReadmeFile>CHANGELOG.md</PackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../BitMart.png" Pack="true" PackagePath="\" />
+		<None Include="../CHANGELOG.md" Pack="true" PackagePath="\" />
+		<None Include="../README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="ApiSharp" Version="3.0.3" />
+	</ItemGroup>
+
+</Project>
