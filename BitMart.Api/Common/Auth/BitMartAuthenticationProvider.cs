@@ -55,7 +55,7 @@ internal class BitMartAuthenticationProvider : AuthenticationProvider
         headers.Add("X-BM-KEY", apikey);
         headers.Add("X-BM-SIGN", signature);
         headers.Add("X-BM-TIMESTAMP", timestamp);
-        headers.Add("X-BM-BROKER-ID", BitMartApiConstants.BrokerId);
+        headers.Add("X-BM-BROKER-ID", options.BrokerId);
     }
 
     public string StreamApiSignature(string payload) => SignHMACSHA256(payload).ToLower();

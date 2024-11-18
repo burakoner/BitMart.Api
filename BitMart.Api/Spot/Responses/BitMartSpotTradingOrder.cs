@@ -39,7 +39,7 @@ public record BitMartSpotTradingOrder
     /// Order type
     /// </summary>
     [JsonProperty("type")]
-    public BitMartSpotOrderType OrderType { get; set; }
+    public BitMartSpotOrderType Type { get; set; }
 
     /// <summary>
     /// Order status
