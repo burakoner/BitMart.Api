@@ -1,5 +1,8 @@
 ﻿## Change Log & Release Notes
 
+* Version 4.5.0101 - 01 Jan 2025
+  * ApiSharp 3.3.1 Update
+
 * Version 4.4.1102 - 02 Nov 2024
 
 * Version 4.4.1026 - 26 Oct 2024
