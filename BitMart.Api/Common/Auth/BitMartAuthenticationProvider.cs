@@ -1,13 +1,7 @@
 ﻿namespace BitMart.Api.Common;
 
-internal class BitMartAuthenticationProvider : AuthenticationProvider
+internal class BitMartAuthenticationProvider(BitMartApiCredentials credentials) : AuthenticationProvider(credentials ?? new BitMartApiCredentials("", "", ""))
 {
-    public BitMartAuthenticationProvider(BitMartApiCredentials credentials) : base(credentials)
-    {
-        if (credentials == null || credentials.Key == null || credentials.Secret == null || string.IsNullOrEmpty(credentials.Memo))
-            throw new ArgumentException("No valid API credentials provided. Key/Secret/Memo needed.");
-    }
-
     public override void AuthenticateRestApi(
         RestApiClient apiClient,
         Uri uri,
@@ -30,7 +24,7 @@ internal class BitMartAuthenticationProvider : AuthenticationProvider
         var credentials = (BitMartApiCredentials)Credentials;
 
         // Check Point
-        if (credentials == null || credentials.Key == null || credentials.Secret == null || string.IsNullOrEmpty(credentials.Memo))
+        if (credentials == null || credentials.Key == null || credentials.Secret == null || string.IsNullOrEmpty(credentials.Memo) || string.IsNullOrEmpty(credentials.Key.GetString()))
             throw new ArgumentException("No valid API credentials provided. Key/Secret/Memo needed.");
 
         // Set Uri
